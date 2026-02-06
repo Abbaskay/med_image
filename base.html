@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedImage AI - Advanced Medical Analysis</title>
+
+    <!-- Fonts: Inter (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Design System CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/modern.css') }}">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    {% block extra_head %}{% endblock %}
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container navbar-container">
+            <a href="{{ url_for('main.index') }}" class="logo">
+                <i class="fas fa-brain"></i>
+                <span>MedImage AI</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="{{ url_for('main.index') }}"
+                    class="nav-link {% if request.path == url_for('main.index') %}active{% endif %}">Home</a>
+                <a href="{{ url_for('main.about') }}"
+                    class="nav-link {% if request.path == url_for('main.about') %}active{% endif %}">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MedImage AI</h3>
+                    <p>Revolutionizing medical diagnostics with state-of-the-art deep learning technology for accurate
+                        tumor detection.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Technology Stack</h3>
+                    <p>TensorFlow • Keras • OpenCV • Flask</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Get in Touch</h3>
+                    <p><i class="fas fa-envelope"></i> muhdabbas2201@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> New Delhi, India</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MedImage AI. All rights reserved. Designed for Excellence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+
+</html>

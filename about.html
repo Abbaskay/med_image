@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="about-hero">
+    <div class="container">
+        <h1>About MedImage AI</h1>
+        <p>Using deep learning to enhance medical diagnostics</p>
+    </div>
+</section>
+
+<section class="about-content">
+    <div class="container">
+        <div class="about-section">
+            <h2>Our Mission</h2>
+            <p>MedImage AI aims to enhance diagnostic accuracy and speed up the analysis process of medical images through advanced deep learning techniques. Our tool is designed to assist medical professionals in identifying abnormalities such as tumors in various types of medical imagery.</p>
+        </div>
+
+        <div class="about-section">
+            <h2>Technology Stack</h2>
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <i class="fab fa-python"></i>
+                    <h3>TensorFlow</h3>
+                    <p>An end-to-end open source machine learning platform that enables building and training neural networks.</p>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-brain"></i>
+                    <h3>Keras</h3>
+                    <p>A high-level neural networks API, running on top of TensorFlow, designed for human beings, not machines.</p>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-camera"></i>
+                    <h3>OpenCV</h3>
+                    <p>An open-source computer vision library with more than 2500 optimized algorithms for image processing.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h2>How It Works</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Upload</h3>
+                    <p>Upload your medical image (MRI, CT scan, X-ray, etc.) to our platform.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Process</h3>
+                    <p>Our AI model analyzes the image using deep learning algorithms trained on thousands of medical scans.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Analyze</h3>
+                    <p>The system identifies potential abnormalities and highlights regions of interest.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Results</h3>
+                    <p>View detailed results with visualizations and probability scores to assist in diagnosis.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h2>Important Note</h2>
+            <div class="disclaimer">
+                <i class="fas fa-exclamation-triangle"></i>
+                <p>This tool is intended to assist medical professionals and should not be used as a replacement for professional medical diagnosis. Always consult with a qualified healthcare provider for medical advice.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 
