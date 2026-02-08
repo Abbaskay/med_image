@@ -1,3 +1,7 @@
+![Python](https://img.shields.io/badge/Python-blue?logo=python)
+![Deep Learning](https://img.shields.io/badge/Deep-Learning-red)
+![Medical Imaging](https://img.shields.io/badge/Medical-Imaging-purple)
+![Healthcare AI](https://img.shields.io/badge/Healthcare-AI-indigo)
 # MedImage AI - Medical Image Analysis
 
 An advanced web application for analyzing medical images using deep learning. This tool assists in identifying abnormalities such as tumors in medical images like MRI and CT scans.
